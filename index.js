@@ -2,6 +2,7 @@ import express from "express";
 import ejs from 'ejs'
 
 const app = express();
+app.set('views', './');
 app.set("view engine", 'ejs')
 const port = 9000;
 
