@@ -8,7 +8,8 @@ const getDirectories = source =>
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
 
-console.dir(getDirectories)
+console.dir(getDirectories())
+console.log(path.join(path.basename(path.resolve(process.cwd())), '/'))
 
 const app = express();
 app.set('views', path.join(path.basename(path.resolve(process.cwd())), '/'))
