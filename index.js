@@ -8,10 +8,10 @@ const getDirectories = source =>
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
 
-console.dir(getDirectories(path.join(path.basename(path.resolve(process.cwd())), './')))
+console.dir(getDirectories(path.join(path.basename(process.cwd()), './')))
 
 const app = express();
-app.set('views', path.join(path.basename(path.resolve(process.cwd())), './'))
+app.set('views', path.join(path.join(path.basename(process.cwd()), './')))
 app.set("view engine", 'ejs')
 const port = 9000;
 
