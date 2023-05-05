@@ -3,7 +3,7 @@ import ejs from 'ejs'
 import path from 'path'
 
 const app = express();
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(path.basename(path.resolve(process.cwd())), '/'))
 app.set("view engine", 'ejs')
 const port = 9000;
 
