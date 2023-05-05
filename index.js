@@ -9,7 +9,7 @@ const getDirectories = source =>
     .map(dirent => dirent.name)
 
 const app = express();
-app.set('views',path.join(path.basename(process.cwd()), './'))
+app.set('views', path.join(__dirname, 'views'))
 app.set("view engine", 'ejs')
 const port = 9000;
 
